@@ -1,4 +1,4 @@
-## My node preconfigured project with TypeScript + Husky + Jest + ESLint
+## My node project template with TypeScript + Husky + Jest + ESLint
 
 ## 📦 Installation
 
@@ -16,25 +16,6 @@ npm install
 - Husky configured for pre-commit and pre-push
 - Jest for unit test
 - ESLint for formatted and maintenable code
-
-## Conf# Node.js Starter Project with TypeScript, Husky, Jest, and ESLint
-
-## 📦 Installation
-
-Clone the repository and install dependencies:
-
-```bash
-git clone https://github.com/med-hedi/node-project-sockel.git
-cd node-project-sockel
-npm install
-```
-
-## Tools Included
-
-- TypeScript preconfigured
-- Husky for pre-commit and pre-push hooks
-- Jest for unit testing
-- ESLint for code formatting and maintainability
 
 ## Configuration
 
