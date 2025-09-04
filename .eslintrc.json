@@ -1,0 +1,47 @@
+{
+  // Specifies the parser for TypeScript code
+  "parser": "@typescript-eslint/parser",
+
+  // Loads the TypeScript ESLint and JSDoc plugins
+  "plugins": ["@typescript-eslint", "jsdoc"],
+
+  // Extends recommended ESLint, TypeScript, Prettier, and JSDoc rules
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:jsdoc/recommended"
+  ],
+
+  // Sets ECMAScript version and module type
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+
+  // Custom rules for your project
+  "rules": {
+    // Requires semicolons at the end of statements
+    "semi": ["error", "always"],
+    // Requires double quotes for strings
+    "quotes": ["error", "double"],
+    // Requires JSDoc comments for functions, methods, classes, arrow functions, and function expressions
+    "jsdoc/require-jsdoc": [
+      "error",
+      {
+        "publicOnly": false,
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true,
+          "ArrowFunctionExpression": true,
+          "FunctionExpression": true
+        }
+      }
+    ],
+    // Requires JSDoc @param tags for function parameters
+    "jsdoc/require-param": "error",
+    // Requires JSDoc @returns tags for return values
+    "jsdoc/require-returns": "error"
+  }
+}

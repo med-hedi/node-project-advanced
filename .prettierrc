@@ -1,0 +1,25 @@
+{
+  // Adds a semicolon at the end of every line
+  "semi": true,
+
+  // Uses single quotes (false = double quotes)
+  "singleQuote": false,
+
+  // Adds a trailing comma after the last element in objects, arrays, etc.
+  "trailingComma": "all",
+
+  // Maximum line length before wrapping
+  "printWidth": 100,
+
+  // Number of spaces per tab
+  "tabWidth": 2,
+
+  // Adds spaces between brackets in objects
+  "bracketSpacing": true,
+
+  // Always adds parentheses around a single arrow function parameter
+  "arrowParens": "always",
+
+  // Forces the end of line format (LF = unix) / (crlf = windows
+  "endOfLine": "lf" 
+}  
