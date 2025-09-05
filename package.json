@@ -4,10 +4,10 @@
   "description": "Starter pack Node.js avec TypeScript, ESLint, Prettier, Jest et Husky",
   "main": "dist/index.js",
   "scripts": {
-    "clean": "rm -rf dist",
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "clean": "rm -rf dist coverage",
+    "dev": "ts-node-dev --respawn --transpile-only src/app/server.ts",
     "build": "npm run clean && tsc",
-    "start": "node dist/index.js",
+    "start": "node dist/app/server.js",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write .",
     "test": "jest --passWithNoTests",
@@ -17,8 +17,10 @@
     "prepare": "husky"
   },
   "devDependencies": {
+    "@types/express": "^5.0.3",
     "@types/jest": "^29.5.14",
     "@types/node": "^20.0.0",
+    "@types/supertest": "^6.0.3",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
     "eslint": "^8.57.0",
@@ -41,5 +43,9 @@
     "**/*.{json,md}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "supertest": "^7.1.4"
   }
 }
