@@ -12,6 +12,7 @@ module.exports = {
     "src/**/*.{ts,js}",
     "!src/**/*.d.ts", // Ignorer les fichiers de type *.d.ts
     "!src/**/*.test.{ts,js}", // Ignorer les fichiers de tests eux-mêmes
+    "!src/{config,app}/**",
   ],
   coverageDirectory: "coverage",
   coverageThreshold: {

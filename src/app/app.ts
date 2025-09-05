@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express, { Request, Response, NextFunction } from "express";
 import userRoutes from "../modules/user/routes";
 
 /**
@@ -12,7 +12,8 @@ app.use(express.json());
 app.use("/api/users", userRoutes);
 
 // Global error handler for consistent error responses
-app.use((err: unknown, req: Request, res: Response) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+app.use((err: unknown, req: Request, res: Response, next: NextFunction) => {
   const status =
     typeof err === "object" && err && "status" in err
       ? (err as { status?: number }).status || 500
