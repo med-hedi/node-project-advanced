@@ -1,13 +1,8 @@
 import request from "supertest";
-import express from "express";
-import userRoutes from "../../../../src/modules/user/routes";
-import { userService } from "../../../../src/modules/user/services/user.service";
+import app from "@src/app/app";
+import { userService } from "@src/modules/user/services/user.service";
 
 describe("User Controller", () => {
-  const app = express();
-  app.use(express.json());
-  app.use("/api/users", userRoutes);
-
   beforeEach(() => {
     // Reset the userService state before each test
     (userService as unknown as { users: unknown[] }).users = [];

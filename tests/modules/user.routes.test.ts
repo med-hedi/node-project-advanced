@@ -1,12 +1,7 @@
 import request from "supertest";
-import express from "express";
-import userRoutes from "../src/modules/user/routes";
+import app from "../../src/app/app";
 
 describe("User Routes", () => {
-  const app = express();
-  app.use(express.json());
-  app.use("/api/users", userRoutes);
-
   it("should create a new user", async () => {
     const res = await request(app)
       .post("/api/users/")
